@@ -1,0 +1,50 @@
+$darkbg: darken(rgb(80, 80, 80), 10%);
+$breakpoint-mobile: 500px;
+$contrast-color: rgb(0, 5, 164);
+// .center{
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     overflow: hidden;
+// }
+
+
+@mixin button {
+        background-color: $contrast-color;
+        padding: 12px;
+        border-radius: 8px;
+        border: 1px solid white;
+        color: white;
+        cursor: pointer;
+}
+
+.cartContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    height: 90vh;
+    padding-top: 12px;
+    .cartWrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .item{
+            justify-content: center;
+            background-color: $darkbg;
+            display: flex;
+            width: 35vw;
+            height: 20vh;
+            gap: 12px;
+            border: 1px solid white;
+            align-items: center;
+            padding: 8px;
+            button{
+                @include button;
+            }
+        }
+        button{
+            @include button;
+        }
+    }
+}
+

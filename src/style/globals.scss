@@ -1,0 +1,9 @@
+$mainbg: rgb(80, 80, 80);
+$darkbg: darken($mainbg, 20%);
+
+body{
+    background-color: $mainbg;
+    margin: 0;
+    padding: 0;
+    color: white;
+}

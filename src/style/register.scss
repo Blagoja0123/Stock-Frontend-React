@@ -1,0 +1,63 @@
+$contrast-background: rgb(0, 5, 164);
+$darkbg: darken(rgb(80, 80, 80), 10%);
+$breakpoint-tablet: 799px;
+$breakpoint-mobile: 500px;
+
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.registerContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    overflow: hidden;
+    .registerForm{
+        display: flex;
+        flex-direction: column;
+        gap:12px;
+        width: 25vw;
+        height: 35vh;
+        background-color: $darkbg;
+        justify-content: center;
+        padding: 15px;
+        padding-bottom: 20px;
+        border-radius: 12px;
+        align-items: center;
+        border: 1px solid white;
+        
+        input{
+            width: 90%;
+            padding: 12px;
+            border-radius: 12px;
+            border: 1px solid white
+        }
+        button{
+            color: white;   
+            padding: 12px;
+            border-radius: 12px;
+            background-color: $contrast-background;
+            border: 1px solid white
+        }
+    }
+}
+
+@media only screen and (max-width: $breakpoint-tablet){
+    .registerContainer{
+        .registerForm{
+            width: 50vw;
+        }
+    }
+}
+
+@media only screen and (max-width: $breakpoint-mobile){
+    .registerContainer{
+        .registerForm{
+            width: 100vw;
+        }
+    }
+}

@@ -1,0 +1,54 @@
+$contrast-color: rgb(0, 5, 164);
+$breakpoint-mobile: 500px;
+.orderContainer{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    .orderWrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 20px;
+        overflow: hidden;
+        .orderSection{
+            border: 1px solid white;
+            height: 80vh;
+            overflow: hidden;
+            width: 40vw;
+            padding: 12px;
+            button{
+                background-color: $contrast-color;
+                padding: 12px;
+                border-radius: 8px;
+                border: 1px solid white;
+                color: white;
+                cursor: pointer;
+            }
+        }
+        .left{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+        }
+    }
+}
+
+@media only screen and (max-width: $breakpoint-mobile){
+    .orderContainer{
+        flex-direction: column;
+        .orderWrapper{
+            display: flex;
+            flex-direction: column;
+            .orderSection{
+                width: 80vw;
+            }
+        }
+    }
+}
